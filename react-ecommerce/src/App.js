@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.css';
+import productList from './product-list/productList';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-      
-      </header>
+      <productList></productList>
+    
+    
     </div>
   );
 }
