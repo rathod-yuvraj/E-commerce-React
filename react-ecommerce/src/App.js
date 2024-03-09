@@ -1,11 +1,14 @@
 import React from 'react';
-import './App.css';
-import productList from './product-list/productList';
+
+import ProductList from './features/product-list/productList';
+// import productList from './product-list/productList';
+
 
 function App() {
   return (
-    <div className="App">
-      <productList></productList>
+    <div >
+     
+      <ProductList></ProductList>
     
     
     </div>

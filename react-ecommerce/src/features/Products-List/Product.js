@@ -1,11 +1,34 @@
- import React, { useState } from 'react';
- import { useSelector, useDispatch } from 'react-redux';
+import React, { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import {
-   increment,
-   incrementAsync,
-  selectCount,
-} from './productListSlice';
 
+  increment,
+  incrementAsync,
+  selectCount,
+} from './counterSlice';
+import productList from '../product-list/productList';
+
+
+export default function Counter() {
+  const count = useSelector(selectCount);
+  const dispatch = useDispatch();
+   return (
+    <div>
+      <div >
+      /*
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/aspect-ratio'),
+    ],
+  }
+  ```
+*/
 const products = [
   {
     id: 1,
@@ -16,33 +39,12 @@ const products = [
     price: '$35',
     color: 'Black',
   },
-  {
-    id: 2,
-    name: 'Basic Tee',
-    href: '#',
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
-    imageAlt: "Front of men's Basic Tee in black.",
-    price: '$35',
-    color: 'Black',
-  },
-  {
-    id: 3,
-    name: 'Basic Tee',
-    href: '#',
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
-    imageAlt: "Front of men's Basic Tee in black.",
-    price: '$35',
-    color: 'Black',
-}]
+  // More products...
+]
 
-
-export default function productList() {
-  const count = useSelector(selectCount);
-  const dispatch = useDispatch();
-   return (
-    <div>
-      <div >
-      <div className="bg-white">
+export default function Example() {
+  return (
+    <div className="bg-white">
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
         <h2 className="text-2xl font-bold tracking-tight text-gray-900">Customers also purchased</h2>
 
@@ -73,9 +75,11 @@ export default function productList() {
         </div>
       </div>
     </div>
+  )
+}
 
-       
       </div>
     </div>
   );
 }
+// export default Product;
