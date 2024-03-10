@@ -1,14 +1,15 @@
 import React from 'react';
 
 import ProductList from './features/product-list/productList';
+import Home from './pages/Home';
 // import productList from './product-list/productList';
 
 
 function App() {
   return (
-    <div >
+    <div className="App" >
      
-      <ProductList></ProductList>
+     <Home></Home>
     
     
     </div>
