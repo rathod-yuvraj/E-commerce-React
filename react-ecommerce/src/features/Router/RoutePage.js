@@ -3,22 +3,16 @@ import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import Home from './pages/Home';
 
-
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import "./index.css";
-import Cart from './features/Cart/Cart';
+
 
 
 const router = createBrowserRouter([
   {
-    path: "/Cart",
-    element: <Cart></Cart>,
-  },
-  {
-    path: "/login",
+    path: "/",
     element: <Login></Login>,
   },
   {
@@ -26,14 +20,14 @@ const router = createBrowserRouter([
     element: <SignUp></SignUp>,
   },
   {
-    path: "/",
+    path: "/Home",
     element: <Home></Home>,
   },
 ]);
-function App() {
+function RouterPage() {
   return (
     <div className="App" >
-    
+        
       <RouterProvider router={router} />
 
   
@@ -44,4 +38,4 @@ function App() {
   );
 }
 
-export default App;
+export default RouterPage;
