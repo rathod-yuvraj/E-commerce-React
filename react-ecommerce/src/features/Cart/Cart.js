@@ -1,11 +1,15 @@
-import React, { Fragment,useState } from 'react';
+import React, { useState,Fragment } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+
+
 import {
 
   increment,
   incrementAsync,
   selectCount,
 } from './CartSlice';
+
+
 import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 
@@ -37,15 +41,12 @@ const products = [
 
 
 
-
 export default function Cart() {
   const count = useSelector(selectCount);
   const [open, setOpen] = useState(true);
   const dispatch = useDispatch();
    return (
-    <div>
-      <div >
-      <Transition.Root show={open} as={Fragment}>
+    <Transition.Root show={open} as={Fragment}>
       <Dialog as="div" className="relative z-10" onClose={setOpen}>
         <Transition.Child
           as={Fragment}
@@ -168,10 +169,7 @@ export default function Cart() {
         </div>
       </Dialog>
     </Transition.Root>
-  
-      </div>
-    </div>
-  );
+   )
 }
 
 

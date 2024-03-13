@@ -2,20 +2,25 @@ import React from 'react';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import Home from './pages/Home';
-
+//import CartPage  from './pages/CartPage';
+import Cart from './features/cart/Cart';
+import Checkout from './pages/Checkout';
 
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 import "./index.css";
-import Cart from './features/Cart/Cart';
+
 
 
 const router = createBrowserRouter([
+
+ 
   {
-    path: "/Cart",
-    element: <Cart></Cart>,
+    path: "/cart",
+    element: <Checkout></Checkout>,
+    
   },
   {
     path: "/login",
@@ -26,8 +31,13 @@ const router = createBrowserRouter([
     element: <SignUp></SignUp>,
   },
   {
-    path: "/",
+    path: "/home",
     element: <Home></Home>,
+  },
+  {
+    path: "/",
+    element: <Cart></Cart>,
+   
   },
 ]);
 function App() {
