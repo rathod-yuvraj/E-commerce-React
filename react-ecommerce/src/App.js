@@ -5,6 +5,7 @@ import Home from './pages/Home';
 //import CartPage  from './pages/CartPage';
 import Cart from './features/cart/Cart';
 import Checkout from './pages/Checkout';
+import CartPage from './pages/CartPage';
 
 import {
   createBrowserRouter,
@@ -46,7 +47,7 @@ function App() {
     
       <RouterProvider router={router} />
 
-  
+  {/* <CartPage></CartPage> */}
 
     
     
