@@ -2,7 +2,6 @@ import React from 'react';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import Home from './pages/Home';
-//import CartPage  from './pages/CartPage';
 import Cart from './features/cart/Cart';
 import Checkout from './pages/Checkout';
 import CartPage from './pages/CartPage';
@@ -17,7 +16,16 @@ import "./index.css";
 
 const router = createBrowserRouter([
 
- 
+  {
+    path: "/",
+    element: <CartPage></CartPage>,
+   
+  },
+  {
+    path: "/1",
+    element: <Cart></Cart>,
+   
+  },
   {
     path: "/cart",
     element: <Checkout></Checkout>,
@@ -35,11 +43,7 @@ const router = createBrowserRouter([
     path: "/home",
     element: <Home></Home>,
   },
-  {
-    path: "/",
-    element: <Cart></Cart>,
-   
-  },
+
 ]);
 function App() {
   return (
@@ -47,7 +51,7 @@ function App() {
     
       <RouterProvider router={router} />
 
-  {/* <CartPage></CartPage> */}
+  
 
     
     
