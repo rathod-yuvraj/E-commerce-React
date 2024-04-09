@@ -13,15 +13,15 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Login></Login>,
+    element: <Login> </Login>,
   },
   {
     path: "/SignUp",
-    element: <SignUp></SignUp>,
+    element: <SignUp> </SignUp>,
   },
   {
     path: "/Home",
-    element: <Home></Home>,
+    element: <Home> </Home>,
   },
 ]);
 function RouterPage() {
