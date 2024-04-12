@@ -17,15 +17,11 @@ import "./index.css";
 const router = createBrowserRouter([
 
   {
-    path: "/",
+    path: "/cartpage",
     element: <CartPage></CartPage>,
    
   },
-  {
-    path: "/1",
-    element: <Cart></Cart>,
-   
-  },
+
   {
     path: "/cart",
     element: <Checkout></Checkout>,
@@ -40,7 +36,7 @@ const router = createBrowserRouter([
     element: <SignUp></SignUp>,
   },
   {
-    path: "/home",
+    path: "/",
     element: <Home></Home>,
   },
 

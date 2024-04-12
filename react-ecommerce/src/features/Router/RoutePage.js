@@ -12,7 +12,7 @@ import {
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/Login",
     element: <Login> </Login>,
   },
   {
@@ -20,7 +20,7 @@ const router = createBrowserRouter([
     element: <SignUp> </SignUp>,
   },
   {
-    path: "/Home",
+    path: "/",
     element: <Home> </Home>,
   },
 ]);
